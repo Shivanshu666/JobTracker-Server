@@ -2,11 +2,17 @@ const express = require("express");
 const app = express();
 require('dotenv').config();
 const mongoose = require("mongoose");
-const userRouter = require("../Server/app/Router/UserRoute");
-const jobsRouter= require("../Server/app/Router/jobsRoute");
-const contactRouter=require("../Server/app/Router/contactRoute");
-const authRoutes=require("./app/Router/authRoutes")
-const applyRoutes=require("./app/Router/applyRoutes")
+// const userRouter = require("../Server/app/Router/UserRoute");
+// const jobsRouter= require("../Server/app/Router/jobsRoute");
+// const contactRouter=require("../Server/app/Router/contactRoute");
+// const authRoutes=require("./app/Router/authRoutes")
+// const applyRoutes=require("./app/Router/applyRoutes")
+const userRouter = require("./Server/app/Router/UserRoute");
+const jobsRouter = require("./Server/app/Router/jobsRoute");
+const contactRouter = require("./Server/app/Router/contactRoute");
+const authRoutes = require("./Server/app/Router/authRoutes");
+const applyRoutes = require("./Server/app/Router/applyRoutes");
+
 app.use(express.json());
 const cors = require("cors");
 app.use(cors());
